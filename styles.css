@@ -1,0 +1,9 @@
+body {
+    background-image: linear-gradient(to right, #ee6f57 , #19d3da);
+  }
+
+.title {
+    text-align: center;
+    padding-top: 1.5rem;
+    font-family: monospace;
+}
