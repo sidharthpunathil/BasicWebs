@@ -1,0 +1,16 @@
+<head>
+    <script src="jquery.js"></script>
+</head>
+<h1 id="title" onmouse
+    Click here
+</h1>
+
+<script type="text/javascript ">
+    function sayGoodbye(){
+        $("#title").html("Goodbye");
+        $("#title").click(function () {
+            $("#title").html("Hello");
+            $("#title").off("click");
+        });
+    };
+</script>
