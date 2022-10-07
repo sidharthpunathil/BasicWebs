@@ -4,26 +4,35 @@
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> 
 </head>
 <body> 
+    <h2 class="title">Simple Counter!</h2>
 <!-- this element will display the variable. It is empty as it will be filled from javascript. --> 
-<h2 class="title">Simple Counter!</h2>
-<h1 class="title" id="number" onclick="count();"></h1> 
-<p class="title" >Click to increment the counter :)</p>
+<h1 class="counter-display">(..)</h1>
+<p class="title">Click on the buttons</p>
+<button class="counter-minus">decrement</button>
+<button class="counter-plus">increment</button>
 </body> 
 <script type="text/javascript"> 
-// this is a variable, we start it at 0 
-var counter = 0; 
-// display the variable in the 
-// element "number" 
-$("#number").text(counter);
-// when this function is called it runs 
-// everything inside the curly brackets 
-function count() { 
-// firstly one is added to the variable 
-// ‘counter' 
-counter = counter + 1;
-// set the h1 element (with id “number”) 
-// with the value of ‘counter' 
-$("#number").text(counter); 
-} 
+let counterDisplayElem = document.querySelector('.counter-display');
+let counterMinusElem = document.querySelector('.counter-minus');
+let counterPlusElem = document.querySelector('.counter-plus');
+
+let count = 0;
+
+updateDisplay();
+
+counterPlusElem.addEventListener("click",()=>{
+    count++;
+    updateDisplay();
+}) ;
+
+counterMinusElem.addEventListener("click",()=>{
+    count--;
+    updateDisplay();
+});
+
+function updateDisplay(){
+    counterDisplayElem.innerHTML = count;
+}
 </script> 
+
 </html>
