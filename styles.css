@@ -7,3 +7,9 @@ body {
     padding-top: 1.5rem;
     font-family: monospace;
 }
+.counter-display{
+  text-align:center ;
+}
+.counter-minus{
+  margin-left: 45%;
+}
